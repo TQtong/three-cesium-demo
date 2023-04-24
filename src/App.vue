@@ -8,18 +8,21 @@
 -->
 <template>
   <!-- <CesiumLoading/> -->
-  <CesiumUseThreeStart/>
+  <!-- <CesiumUseThreeStart/> -->
+  <CesiumUseThreeLoadBaseGraph/>
 </template>
 
 <script lang='ts'>
 import { Options, Vue } from 'vue-class-component'
 import CesiumLoading from './views/CesiumLoading/CesiumLoading'
 import CesiumUseThreeStart from './views/CesiumUseThreeStart/CesiumUseThreeStart'
+import CesiumUseThreeLoadBaseGraph from './views/CesiumUseThreeLoadBaseGraph/CesiumUseThreeLoadBaseGraph'
 
 @Options({
   components: {
     // CesiumLoading,
-    CesiumUseThreeStart
+    // CesiumUseThreeStart,
+    CesiumUseThreeLoadBaseGraph
   }
 })
 export default class App extends Vue {}

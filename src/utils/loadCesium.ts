@@ -1,3 +1,11 @@
+/*
+ * @Author: TQtong 2733707740@qq.com
+ * @Date: 2023-04-24 14:25:44
+ * @LastEditors: TQtong 2733707740@qq.com
+ * @LastEditTime: 2023-04-24 15:50:49
+ * @FilePath: \three-cesium-demo\src\views\CesiumUseThreeStart\composables\loadCesium.ts
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 
 import {
   Viewer,
@@ -5,10 +13,7 @@ import {
   Cartesian3,
   Math as CesiumMath
 } from 'cesium'
-import { cesiumViewer } from '@/base/baseObj'
-
-const minWGS84 = [115.23, 39.55]
-const maxWGS84 = [116.23, 41.55]
+import { cesiumViewer, boundingBox } from '@/base/baseObj'
 
 export const loadCesium = ():void => {
   cesiumViewer.viewer = new Viewer('cesiumContainer', {
@@ -36,8 +41,8 @@ export const loadCesium = ():void => {
     terrainShadows: ShadowMode.DISABLED
   })
   const center = Cartesian3.fromDegrees(
-    (minWGS84[0] + maxWGS84[0]) / 2,
-    (minWGS84[1] + maxWGS84[1]) / 2 - 1,
+    (boundingBox.minWGS84[0] + boundingBox.maxWGS84[0]) / 2,
+    (boundingBox.minWGS84[1] + boundingBox.maxWGS84[1]) / 2 - 1,
     200000
   )
   cesiumViewer.viewer.camera.flyTo({

@@ -1,13 +1,15 @@
+/*
+ * @Author: TQtong 2733707740@qq.com
+ * @Date: 2023-04-24 14:29:53
+ * @LastEditors: TQtong 2733707740@qq.com
+ * @LastEditTime: 2023-04-24 15:46:06
+ * @FilePath: \three-cesium-demo\src\views\CesiumUseThreeStart\composables\threeRender.ts
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 import { cesiumViewer, camera, renderer, scene } from '@/base/baseObj'
-import {
-  Viewer,
-  ShadowMode,
-  Cartesian3,
-  Math as CesiumMath,
-  Color
-} from 'cesium'
+import { Math as CesiumMath } from 'cesium'
 
-export const threeRender = ():void => {
+export const threeRender = (): void => {
   // Clone Cesium Camera projection position so the
   // Three.js Object will appear to be at the same place as above the Cesium Globe
   camera.matrixAutoUpdate = false

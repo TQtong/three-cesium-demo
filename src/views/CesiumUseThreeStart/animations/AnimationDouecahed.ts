@@ -2,16 +2,9 @@ import * as THREE from 'three'
 import { scene, boundingBox } from '@/base/baseObj'
 import { Cartesian3 } from 'cesium'
 
-const _3Dobjects = [] as any
-const _3DObject = (): any => {
-  return {
-    threeMesh: null, // Three.js 3DObject.mesh
-    minWGS84: null, // location bounding box
-    maxWGS84: null
-  } as any
-}
-
 export const createDoucahed = ():void => {
+  const _3Dobjects = [] as any
+
   // Three.js Objects
   /**
        *  three的坐标系（右手坐标系），关键数据结构 Vector3
@@ -94,8 +87,6 @@ export const createDoucahed = ():void => {
       1
     )
 
-    // use direction from bottom left to top left as up-vector
-
     // configure entity position and orientation
     _3Dobjects[id].threeMesh.position.copy(center)
     _3Dobjects[id].threeMesh.lookAt(
@@ -104,4 +95,12 @@ export const createDoucahed = ():void => {
       centerHigh.z
     )
   }
+}
+
+const _3DObject = (): any => {
+  return {
+    threeMesh: null, // Three.js 3DObject.mesh
+    minWGS84: null, // location bounding box
+    maxWGS84: null
+  } as any
 }
