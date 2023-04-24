@@ -9,8 +9,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import './styles/base.less'
 import { Ion } from 'cesium'
+
+import 'cesium/Build/Cesium/Widgets/widgets.css'
+import './styles/base.less'
 
 Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiOTQ1OTEzMi01OGY3LTQyNzctYjBlOS01Zjg5ZTM0ODAwODMiLCJpZCI6MTE0MDgzLCJpYXQiOjE2Njc4OTA0NTh9.U4eb__2aDvkvQPz41Hm9PROQOCde_u2SlStrdiYl7Kk'
 
