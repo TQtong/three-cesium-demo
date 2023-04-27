@@ -2,7 +2,7 @@
  * @Author: TQtong 2733707740@qq.com
  * @Date: 2023-04-24 14:25:44
  * @LastEditors: TQtong 2733707740@qq.com
- * @LastEditTime: 2023-04-26 21:33:00
+ * @LastEditTime: 2023-04-27 10:08:18
  * @FilePath: \three-cesium-demo\src\views\CesiumUseThreeStart\composables\loadCesium.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -79,7 +79,7 @@ const loadImage = ():void => {
       service: 'WMS',
       transparent: true,
       format: 'image/png',
-      srs: 'EPSG:4326' // 这个参数需要研究一下为啥有时需要它能加载有时不需要它也能加载
+      srs: 'EPSG:4326'
     },
     rectangle: rectangle
   })
