@@ -2,7 +2,7 @@
  * @Author: TQtong 2733707740@qq.com
  * @Date: 2023-04-24 14:25:44
  * @LastEditors: TQtong 2733707740@qq.com
- * @LastEditTime: 2023-04-26 21:33:00
+ * @LastEditTime: 2023-04-27 09:26:10
  * @FilePath: \three-cesium-demo\src\views\CesiumUseThreeStart\composables\loadCesium.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -72,17 +72,4 @@ export const loadCesium = (): void => {
 
 const loadImage = ():void => {
   const rectangle = Rectangle.fromDegrees(119.914698174, 31.72406995, 120.181831273, 31.873365692)
-  const wmsImageryProvider = new WebMapServiceImageryProvider({
-    url: 'http://192.168.1.61:8080/geoserver/tq_workspace/wms',
-    layers: 'tq_workspace:rep',
-    parameters: {
-      service: 'WMS',
-      transparent: true,
-      format: 'image/png',
-      srs: 'EPSG:4326' // 这个参数需要研究一下为啥有时需要它能加载有时不需要它也能加载
-    },
-    rectangle: rectangle
-  })
-
-  cesiumViewer.viewer.imageryLayers.addImageryProvider(wmsImageryProvider)
 }
