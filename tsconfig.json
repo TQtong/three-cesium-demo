@@ -34,7 +34,7 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
-  ],
+, "src/controller/ueController.js"  ],
   "exclude": [
     "node_modules"
   ]

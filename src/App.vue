@@ -15,10 +15,16 @@
 
 <script lang='ts'>
 import { Options, Vue } from 'vue-class-component'
+import { onMounted } from 'vue'
+import { webSocketInit } from '@/utils/ueMap'
 import CesiumLoading from './views/CesiumLoading/CesiumLoading'
 import CesiumUseThreeStart from './views/CesiumUseThreeStart/CesiumUseThreeStart'
 import CesiumUseThreeLoadBaseGraph from './views/CesiumUseThreeLoadBaseGraph/CesiumUseThreeLoadBaseGraph'
 import CesiumClip from './views/CesiumClip/CesiumClip'
+
+onMounted(() => {
+  webSocketInit()
+})
 
 @Options({
   components: {
