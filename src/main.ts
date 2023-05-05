@@ -2,7 +2,7 @@
  * @Author: TQtong 2733707740@qq.com
  * @Date: 2023-04-24 09:54:07
  * @LastEditors: TQtong 2733707740@qq.com
- * @LastEditTime: 2023-04-28 10:27:11
+ * @LastEditTime: 2023-05-05 10:34:30
  * @FilePath: \three-cesium-demo\src\main.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -12,7 +12,9 @@ import router from './router'
 import { Ion } from 'cesium'
 import { createPinia } from 'pinia'
 import ueController from './controller/ueController'
+import ElementPlus from 'element-plus'
 
+import 'element-plus/dist/index.css'
 import 'cesium/Build/Cesium/Widgets/widgets.css'
 import './styles/base.less'
 
@@ -25,4 +27,5 @@ app.provide('ueController', ueController)
 
 app.use(router)
 app.use(pinia)
+app.use(ElementPlus)
 app.mount('#app')

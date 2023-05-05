@@ -2,7 +2,7 @@
  * @Author: TQtong 2733707740@qq.com
  * @Date: 2023-04-24 13:42:56
  * @LastEditors: TQtong 2733707740@qq.com
- * @LastEditTime: 2023-04-24 14:45:52
+ * @LastEditTime: 2023-05-05 10:22:22
  * @FilePath: \three-cesium-demo\src\base\baseObj.ts
  * @Description: base class
  */
@@ -46,6 +46,6 @@ export const cesiumViewer = {
 } as any
 
 export const boundingBox = {
-  minWGS84: [115.23, 39.55] as Array<number>,
-  maxWGS84: [116.23, 41.55] as Array<number>
+  minWGS84: [119.914698174, 31.72406995] as Array<number>,
+  maxWGS84: [120.181831273, 31.873365692] as Array<number>
 }

@@ -13,7 +13,6 @@ let pointsLength:any
 
 export const init = ():void => {
   loadCesium()
-  console.log()
   globe = cesiumViewer.viewer.scene.globe
   setClip()
   window.onresize = () => {

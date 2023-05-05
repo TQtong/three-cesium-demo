@@ -2,7 +2,7 @@
  * @Author: TQtong 2733707740@qq.com
  * @Date: 2023-04-24 14:25:44
  * @LastEditors: TQtong 2733707740@qq.com
- * @LastEditTime: 2023-04-28 09:42:53
+ * @LastEditTime: 2023-05-05 10:24:10
  * @FilePath: \three-cesium-demo\src\views\CesiumUseThreeStart\composables\loadCesium.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -53,14 +53,9 @@ export const loadCesium = (): void => {
     (boundingBox.minWGS84[1] + boundingBox.maxWGS84[1]) / 2 - 1,
     200000
   )
-  const test = Cartesian3.fromDegrees(
-    119.285214219999943,
-    31.64065216900002,
-    20000
-  )
 
   cesiumViewer.viewer.camera.flyTo({
-    destination: test,
+    destination: center,
     orientation: {
       heading: CesiumMath.toRadians(0),
       pitch: CesiumMath.toRadians(-60),
@@ -78,7 +73,7 @@ export const loadCesium = (): void => {
   /**
    * 设置后当相机高度达到设置的最大和最小高度时将不再放大和缩小
    */
-  cesiumViewer.viewer.scene.screenSpaceCameraController.minimumZoomDistance = 2500 // 相机的高度的最小值
+  cesiumViewer.viewer.scene.screenSpaceCameraController.minimumZoomDistance = 250 // 相机的高度的最小值
   cesiumViewer.viewer.scene.screenSpaceCameraController.maximumZoomDistance = 22000000 // 相机高度的最大值
   // cesiumViewer.viewer.scene.screenSpaceCameraController._minimumZoomRate = 30000 // 设置相机缩小时的速率
   // cesiumViewer.viewer.scene.screenSpaceCameraController._maximumZoomRate = 5906376272000 // 设置相机放大时的速率
@@ -95,7 +90,7 @@ const loadImage = (): void => {
     31.873365692
   )
   const wmsImageryProvider = new WebMapServiceImageryProvider({
-    url: 'http://192.168.4.18:8080/geoserver/tq_workspace/wms',
+    url: 'http://192.168.1.61:8080/geoserver/tq_workspace/wms',
     layers: 'tq_workspace:rep',
     parameters: {
       service: 'WMS',
