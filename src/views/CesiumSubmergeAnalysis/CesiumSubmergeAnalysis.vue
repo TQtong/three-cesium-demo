@@ -2,7 +2,7 @@
  * @Author: TQtong 2733707740@qq.com
  * @Date: 2023-04-24 10:20:01
  * @LastEditors: TQtong 2733707740@qq.com
- * @LastEditTime: 2023-05-05 10:58:20
+ * @LastEditTime: 2023-05-05 13:39:18
  * @FilePath: \three-cesium-demo\src\views\CesiumUseThree\CesiumUseThree.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -19,7 +19,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { init } from './index'
-import { ScreenSpaceEventHandler, Viewer, ScreenSpaceEventType, Cartesian3, Color, ArcGisMapServerImageryProvider, createWorldTerrain, CallbackProperty, Primitive, Cartesian2, Material, EllipsoidSurfaceAppearance, PolygonGeometry, PolygonHierarchy, GeometryInstance } from 'cesium'
+import { ScreenSpaceEventHandler, Viewer, ScreenSpaceEventType, Cartesian3, Color, ArcGisMapServerImageryProvider, createWorldTerrain, CallbackProperty, Primitive, Cartesian2, Material, EllipsoidSurfaceAppearance, PolygonGeometry, PolygonHierarchy, GeometryInstance, Ray } from 'cesium'
 
 let viewer:Viewer
 

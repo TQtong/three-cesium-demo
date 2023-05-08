@@ -2,7 +2,7 @@
  * @Author: TQtong 2733707740@qq.com
  * @Date: 2023-04-24 10:20:01
  * @LastEditors: TQtong 2733707740@qq.com
- * @LastEditTime: 2023-05-05 09:54:55
+ * @LastEditTime: 2023-05-05 17:16:05
  * @FilePath: \three-cesium-demo\src\views\CesiumUseThree\CesiumUseThree.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -38,7 +38,7 @@ import {
 
 const cesiumContainer = ref<HTMLDivElement>()
 const threeContainer = ref<HTMLDivElement>()
-const ueIframeUrl = 'http://192.168.60.36:83'
+const ueIframeUrl = 'http://192.168.40.15:84'
 const flag = ref<boolean>(false)
 
 onMounted(() => {

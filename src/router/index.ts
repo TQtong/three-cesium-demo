@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import HomeView from '../views/CesiumSubmergeAnalysis/CesiumSubmergeAnalysis'
+// import HomeView from '../views/CesiumSubmergeAnalysis/CesiumSubmergeAnalysis'
+import HomeView from '../views/CesiumAddUE/CesiumAddUE'
 
 const routes: Array<RouteRecordRaw> = [
   {
