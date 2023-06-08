@@ -2,7 +2,7 @@
  * @Author: TQtong 2733707740@qq.com
  * @Date: 2023-04-24 14:25:44
  * @LastEditors: TQtong 2733707740@qq.com
- * @LastEditTime: 2023-05-05 17:13:26
+ * @LastEditTime: 2023-05-15 14:43:57
  * @FilePath: \three-cesium-demo\src\views\CesiumUseThreeStart\composables\loadCesium.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -54,6 +54,8 @@ export const loadCesium = (): void => {
     (boundingBox.minWGS84[1] + boundingBox.maxWGS84[1]) / 2,
     200000
   )
+  console.log((boundingBox.minWGS84[0] + boundingBox.maxWGS84[0]) / 2)
+  console.log((boundingBox.minWGS84[1] + boundingBox.maxWGS84[1]) / 2)
 
   cesiumViewer.viewer.camera.flyTo({
     destination: center,
@@ -91,7 +93,7 @@ const loadImage = (): void => {
     31.873365692
   )
   const wmsImageryProvider = new WebMapServiceImageryProvider({
-    url: 'http://192.168.4.47:8080/geoserver/tq_workspace/wms',
+    url: 'http://192.168.6.109:8080/geoserver/tq_workspace/wms',
     layers: 'tq_workspace:rep',
     parameters: {
       service: 'WMS',

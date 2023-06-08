@@ -2,7 +2,7 @@
  * @Author: TQtong 2733707740@qq.com
  * @Date: 2023-04-24 10:20:01
  * @LastEditors: TQtong 2733707740@qq.com
- * @LastEditTime: 2023-05-05 17:16:05
+ * @LastEditTime: 2023-05-15 15:07:26
  * @FilePath: \three-cesium-demo\src\views\CesiumUseThree\CesiumUseThree.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -47,17 +47,18 @@ onMounted(() => {
   const handler = new ScreenSpaceEventHandler(cesiumViewer.viewer.scene.canvas)
   handler.setInputAction(function () {
     const test = Cartesian3.fromDegrees(
-      119.285214219999943,
-      31.64065216900002,
-      6000
+      121.041608,
+      29.960749,
+      500
     )
+    console.log(cesiumViewer.viewer.camera)
 
     cesiumViewer.viewer.camera.flyTo({
       destination: test,
       orientation: {
-        heading: CesiumMath.toRadians(0),
-        pitch: CesiumMath.toRadians(-60),
-        roll: CesiumMath.toRadians(0)
+        heading: CesiumMath.toRadians(140),
+        pitch: CesiumMath.toRadians(80),
+        roll: 0
       },
       duration: 3
     })
